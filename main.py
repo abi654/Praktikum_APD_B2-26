@@ -1,6 +1,7 @@
 print("hello world") nama = "abbie"
 >>> hobi = "bola"
->>> print(nama)
+>>> 
+print(nama)
 abbie
 >>> print(hobi)
 bola
