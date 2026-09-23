@@ -24,3 +24,8 @@ print(nim)
 print(bolean)
 print(total_jpy)
 print(slice_3_sampai_5)
+
+angka = 6
+if angka < 10:
+    print("angka kurang dari 10")
+    
