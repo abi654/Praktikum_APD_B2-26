@@ -50,22 +50,11 @@ while True:
                 user_aktif = akun_nya
                 print(f"Login berhasil, {user_aktif[0]}!") 
             input("Tekan Enter untuk melanjutkan...")
-
         elif pilihan == "2":
             os.system("cls" if os.name == "nt" else "clear")
             print("            Register Akun Baru")
             print("Ketik '0' Pada Username untuk kembali ke menu utama")
             batal  = False  
-            username = input("Username: ").strip().lower()
-            if username == "0":
-                batal = True
-            if not batal:
-                password = input("Password: ")
-                role = "user"
-                akun_nya = None
-                for u in data_user:
-                    if u[0] == username:
-                        akun_nya = u
 
             while True:
                 username = input("Username: ").strip().lower()
@@ -87,24 +76,26 @@ while True:
                     else:
                         break
 
-                    if batal == False:
-                        while True:
-                            password = input("Password: ")
-                            if len(password) < 6:
-                                print("Password minimal 6 karakter!")
-                            else:
-                                konfirmasi = input("Konfirmasi Password: ") 
-                                if konfirmasi == password:
-                                    break
-                                else:
-                                    print("Password tidak sama, coba lagi")
+            if batal == False:
+                while True:
+                    password = input("Password: ")
+                    if len(password) < 6:
+                        print("Password minimal 6 karakter!")
+                    else:
+                        konfirmasi = input("Konfirmasi Password: ") 
+                        if konfirmasi == password:
+                            break
+                        else:
+                            print("Password tidak sama, coba lagi")
+
+                data_user.append([username, password, "user"])
+                print("Registrasi berhasil! Silahkan login .")
+            else:    
+                print("Registrasi dibatalkan")
+            input("Tekan Enter untuk melanjutkan...")
 
 
-                                data_user.append([username, password, "user"])
-                                print("Registrasi berhasil! Silahkan login .")
-                    else:    
-                        print("Registrasi dibatalkan")
-                    input("Tekan Enter untuk melanjutkan...")
+       
         elif pilihan == "0":
             print("Terima Kasih Telah Menggunakan Sistem Data Vaksin")
             break
