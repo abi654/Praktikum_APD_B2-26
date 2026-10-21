@@ -94,8 +94,7 @@ while True:
                 print("Registrasi dibatalkan")
             input("Tekan Enter untuk melanjutkan...")
 
-
-       
+      
         elif pilihan == "0":
             print("Terima Kasih Telah Menggunakan Sistem Data Vaksin")
             break

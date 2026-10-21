@@ -69,15 +69,14 @@ kartu = {"merah", "merah", "biru", "hijau"}
 # Nama saya adalah Siti Julpa
 # Saya mengambil mata kuliah Struktur Data dan Basis Data
 
-game = {
-"pou" : "chill",
-"genshin impact" : "action",
-"valorant" : "fps",
-"minecraft" : "sandbox",
-"mobile legend" : "moba"
-}
+# game = {
+# "pou" : "chill",
+# "genshin impact" : "action",
+# "valorant" : "fps",
+# "minecraft" : "sandbox",
+# "mobile legend" : "moba"
+# }
 
 
-del game["pou"]
-print(game)
-
+# del game["pou"]
+# print(game)
